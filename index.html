@@ -10,9 +10,12 @@
 </head>
 
 <body>
-    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
-    <script src="interactivity.js"></script>
     <div id="header" class="header">
+        <a href="exploration.html" class="container clickable">
+            <img src="noun_Hiking_4185384.svg" width="50px">
+            <div id="name-container">Mackenzie Creamer</div>
+        </a>
+
         <!-- Add button to take you back to the index.html page -->
         <div class="container" id="title-container">
             <h2>DS4200 Web Dev Tutorial!</h2>
@@ -26,12 +29,24 @@
         -->
     </div>
     <div class="container body-container">
-        <div class="">
-            <div class="">
+        <div class="container content-container">
+            <div class="container content-title">
                 <h3>Table content below!</h3>
             </div>
             <div class="">
-                <!-- Add content to create the container you'll be making here -->
+                <table id="recordTable">
+                    <thead>
+                        <tr>
+                            <th>Customer</th>
+                            <th>Purchase Date</th>
+                            <th>Purchase Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+                <button onmousedown="populateTable()">Click me to add elements to the table!</button>
             </div>
         </div>
         <!--<div class="container content-container">
@@ -69,4 +84,7 @@
         </div>
     </div>
 </body>
+
+<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+<script src="interactivity.js"></script>
 </html>

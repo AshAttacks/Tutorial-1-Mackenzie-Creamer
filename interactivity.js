@@ -3,6 +3,26 @@ d3.csv("/ExampleData.csv", function(data) {
     globalData.push(data);
 });
 
+async function populateTable(){
+    var table = document.getElementById("recordTable");
+    var tbody = table.getElementsByTagName("tbody")[0];
+    
+    for(var i=0;i<globalData.length;i++) {
+        var row = document.createElement("tr")
+        row.id = globalData[i].ID
+        var cell1 = document.createElement("td");
+        var cell2 = document.createElement("td");
+        var cell3 = document.createElement("td");
+        cell1.innerHTML = globalData[i].Customer;
+        cell2.innerHTML = globalData[i].PurchaseDate;
+        cell3.innerHTML = globalData[i].PurchaseAmount;
+        row.appendChild(cell1);
+        row.appendChild(cell2);
+        row.appendChild(cell3);
+        tbody.appendChild(row);
+    }
+}
+
 function sort(compareObject,display) {
     var table = document.getElementById("recordsTable"),
     tbody = table.getElementsByTagName("tbody")[0];
